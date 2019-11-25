@@ -12,10 +12,8 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          汉字
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -91,13 +89,13 @@
 </template>
 
 <script>
-export default {
-  name: 'MyLayout',
+    export default {
+        name: 'MyLayout',
 
-  data() {
-    return {
-      leftDrawerOpen: false,
+        data() {
+            return {
+                leftDrawerOpen: false,
+            };
+        },
     };
-  },
-};
 </script>
