@@ -94,7 +94,7 @@
                 this.input = '';
                 const now = Date.now();
                 const d = now - this.currentStart;
-                this.timeString = `Time of last lap: ${d / 1000} seconds. 字/s: ${parseFloat(this.currentText.length / (d / 1000)).toFixed(2)}`;
+                this.timeString = `Time of last lap: ${d / 1000} seconds. 字/min: ${parseFloat(this.currentText.length / (d / 1000) * 60).toFixed(2)}`;
                 this.currentText = this.randomText();
                 this.currentStart = Date.now();
             },
