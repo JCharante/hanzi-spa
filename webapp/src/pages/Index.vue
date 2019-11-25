@@ -60,6 +60,24 @@
                     "喂？",
                     "我和你。",
                     "我认识他。",
+                    "喂？",
+                    "喂，请问，常老师在吗？",
+                    "我就是。",
+                    "您是哪位？",
+                    "老师，您好。我是李友。",
+                    "李友，有事儿吗？",
+                    "老师，今天下午您有时间吗？",
+                    "我想问您几个问题。",
+                    "对不起，今天下午我要开会。",
+                    "明天呢？",
+                    "明天上午我有两节课，下午三点要给二年级考试。",
+                    "您什么时候有空儿？",
+                    "明天四点以后才有空儿。",
+                    "要是您方便，四点半我到您的办公室去，行吗？",
+                    "四点半，没问题。",
+                    "我在办公室等你。",
+                    "谢谢您。",
+                    "别客气。",
                 ];
             },
         },
@@ -68,11 +86,11 @@
                 return this.corpus[Math.floor(Math.random() * this.corpus.length)];
             },
             next() {
-                this.currentText = this.randomText();
                 this.input = '';
                 const now = Date.now();
                 const d = now - this.currentStart;
-                this.timeString = `Time of last lap: ${d / 1000} seconds.`;
+                this.timeString = `Time of last lap: ${d / 1000} seconds. 字/s: ${parseFloat(this.currentText.length / (d / 1000)).toFixed(2)}`;
+                this.currentText = this.randomText();
                 this.currentStart = Date.now();
             },
             oni() {
