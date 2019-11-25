@@ -7,5 +7,8 @@
 <script>
     export default {
         name: 'App',
+        mounted() {
+            this.$q.addressbarColor.set();
+        },
     };
 </script>
